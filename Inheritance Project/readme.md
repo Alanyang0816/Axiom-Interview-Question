@@ -1,29 +1,32 @@
-# Threading Project
-Write an app that spawns X threads. Each thread should have a unique incrementing identifier (0-X). The main thread should wait for 10 seconds and then signal the spawned threads to begin. Each thread should get the value of a shared number, increment the shared number, and print the retrieved value and the unique ID number. Threads should do this in a loop Z times. X and Z are command line arguments. Project should be written in C++ and include a readme with instructions on how to build and run on Ubuntu. Put the project on GitHub and send me a link.
+# Inheritance Project
+Create a set of classes that inherit from a base class. The base class should be Fruit and the derived classes are all types of fruit (Banana, Tangerine, and Pear). The base Fuit class should only have one member: Identify(). Implement your classes so that the included main function will produce the included result. Project should be written in C++ and include a readme with instructions on how to build and run on Ubuntu. Put the project on GitHub and send me a link.
+```
+///////main///////
+#include "Fruit.hpp"
+#include <vector>
+
+int main() {
+    vector<Fruit *> fruit;
+
+    fruit.push_back(new Fruit());
+    fruit.push_back(new Banana());
+    fruit.push_back(new Tangerine());
+    fruit.push_back(new Pear());
+
+    for (auto f : fruit) {
+        f->Identify();
+    }
+}
+
+///////main///////
+```
 
 ## Sample output:
 ```
-$ ./program 4 5
-Sleeping for 10 seconds...
-Thread #0, value 0
-Thread #2, value 1
-Thread #3, value 2
-Thread #1, value 3
-Thread #0, value 4
-Thread #3, value 5
-Thread #2, value 6
-Thread #1, value 7
-Thread #0, value 8
-Thread #3, value 9
-Thread #1, value 10
-Thread #2, value 11
-Thread #3, value 12
-Thread #1, value 13
-Thread #2, value 14
-Thread #0, value 15
-Thread #3, value 16
-Thread #1, value 17
-Thread #2, value 18
+I am a fruit.
+I am a banana.
+I am a tangerine.
+I am a pear.
 ```
 ## How to run this projects?
 1. Download project folder from github.
